@@ -1,12 +1,10 @@
 package ru.netology;
 
-import Data.DataGenerator;
+import data.DataGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -29,7 +27,7 @@ public class DateChangeTest {
 
     @Test
 
-    public void CardDeliveryTest() {
+    public void cardDeliveryTest() {
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue(city);
         $(".calendar-input__custom-control input").doubleClick().sendKeys(planingDate);
